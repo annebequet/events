@@ -1,0 +1,11 @@
+[lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # Warning flake8
+    "W",
+    # isort
+    "I",
+]
