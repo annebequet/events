@@ -10,10 +10,10 @@ RUN apt update && apt install build-essential -y
 RUN pip install poetry
 
 # Installing dependencies
-COPY poetry.lock pyproject.toml /app
+COPY poetry.lock pyproject.toml /app/
 RUN cd /app && poetry install
 
 # installing code
-COPY lldlg/ /app 
+COPY src/ /app 
 # TODO use gunicorn as `runserver` is not secure
 CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
