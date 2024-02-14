@@ -10,7 +10,7 @@ RUN apt update && apt install build-essential -y
 RUN pip install poetry
 
 # Installing dependencies
-COPY poetry.lock pyproject.toml /app/
+COPY poetry.lock pyproject.toml /app
 RUN cd /app && poetry install
 
 # installing code
